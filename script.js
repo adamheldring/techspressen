@@ -8,12 +8,12 @@ fetch(req)
         console.log(response.json());
     })
 
-    const expand = () => {
+    function expand() {
       this.classList.toggle('expanded')
       console.log(this.classList)
     }
 
-document.getElementsByClassName('gridArticle big')[0].onclick = expand
+document.getElementsByClassName('gridArticle')[0].onclick = expand
 document.getElementsByClassName('gridArticle')[1].onclick = expand
 document.getElementsByClassName('gridArticle')[2].onclick = expand
 document.getElementsByClassName('gridArticle')[3].onclick = expand

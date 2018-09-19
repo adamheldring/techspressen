@@ -50,7 +50,7 @@ body {
   background-color: red;
 }
 
-.expanded {
+.gridArticle.expanded {
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
 }
