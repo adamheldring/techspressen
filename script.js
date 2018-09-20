@@ -16,7 +16,7 @@ fetch(req)
       for(i = 0; i < 15; i++) {
         console.log(i);
         document.getElementsByClassName('articleTitle')[i].innerHTML = result.articles[i].title;
-        document.getElementsByClassName('image')[i].src = result.articles[i].urlToImage;
+        document.getElementsByClassName('articleImage')[i].style.backgroundImage = "url('" + result.articles[i].urlToImage + "')";
       }
 
     })
