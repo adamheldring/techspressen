@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      body {
+        box-sizing: border-box;
+      }
+
+      .little-box-container {
+        border: 1px solid black;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: stretch;
+        margin: 20px;
+      }
+
+      .reverse {
+        flex-flow: row-reverse nowrap;
+      }
+
+      .left {
+        width: 50%;
+        background-color: white;
+      }
+
+      .right {
+        width: 50%;
+        background-color: pink;
+      }
+
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="little-box-container">
+      <div class="left">
+        Left
+      </div>
+      <div class="right">
+        Right
+      </div>
+    </div>
+
+    <div class="little-box-container reverse">
+      <div class="left">
+        Left
+      </div>
+      <div class="right">
+        Right
+      </div>
+    </div>
+
+  </body>
+</html>
