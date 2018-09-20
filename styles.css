@@ -28,7 +28,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 200px);
+  grid-template-rows: repeat(12, 200px);
   grid-gap: 10px;
   grid-auto-flow: row dense;
   background-color: lightblue;
