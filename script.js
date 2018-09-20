@@ -1,4 +1,7 @@
 // This is the js file
+
+// GOOGLE STUFF
+
 var url = 'https://newsapi.org/v2/everything?' +
           'q=space&' +
           'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
@@ -7,16 +10,25 @@ fetch(req)
     .then(function(response) {
         return response.json();
     }).then(function(result){
-        console.log(result.articles[0].title);
+        console.log(result.articles[0]);
+        // console.log(result.articles[0].title);
+
+        document.getElementsByClassName('articleTitle')[0].innerHTML = result.articles[0].title;
+        document.getElementsByClassName('image')[0].src = result.articles[0].urlToImage;
     })
 
-    function expand() {
-      this.classList.toggle('expanded')
-      console.log(this.classList)
-    }
 
+// OUR TOOGLE EXPANDER
+function expand() {
+  this.classList.toggle('expanded')
+  console.log(this.classList)
+}
+
+
+// LOOPING THROUGH OUR ARTICELS CHECKING FOR CLICKS
 for (i = 0; i < 15; i++) {
   document.getElementsByClassName('gridArticle')[i].onclick = expand
 }
 
+// EXPERIMENT FUTURE CREATING DIVS
 const box = document.createElement('div')
