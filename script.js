@@ -11,7 +11,8 @@ fetch(req)
         return response.json();
     }).then(function(result){
         console.log(result.articles[0]);
-        // console.log(result.articles[0].title);
+    }).catch(error => {
+        console.log(error)
 
       for(i = 0; i < 15; i++) {
         console.log(i);
