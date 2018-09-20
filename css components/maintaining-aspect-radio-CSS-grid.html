@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      .grid-container {
+        border: 2px solid black;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 85%;
+        margin: 0px auto;
+      }
+
+      .grid-item-container {
+        position: relative;
+        background-color: pink;
+        padding-bottom: 100%;
+      }
+
+      /* The example I found used the :before pseudo-class,
+      but it seems to work by moving the padding-bottom line up to the class above */
+
+      /* .grid-item-container:before {
+        content: "";
+        display: inline-block;
+        padding-bottom: 100%;
+      } */
+
+      .grid-item-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="grid-container">
+
+      <div class="grid-item-container">
+        <div class="grid-item-content">
+          Text here
+        </div>
+      </div>
+      <div class="grid-item-container">
+        <div class="grid-item-content">
+          Text here
+        </div>
+      </div>
+      <div class="grid-item-container">
+        <div class="grid-item-content">
+          <img src="https://images.pexels.com/photos/827058/pexels-photo-827058.jpeg?auto=compress&cs=tinysrgb&h=350" />
+        </div>
+      </div>
+      <div class="grid-item-container">
+        <div class="grid-item-content">
+          Text here
+        </div>
+      </div>
+      <div class="grid-item-container">
+        <div class="grid-item-content">
+          <img src="https://images.pexels.com/photos/827058/pexels-photo-827058.jpeg?auto=compress&cs=tinysrgb&h=350" />
+        </div>
+      </div>
+      <div class="grid-item-container">
+        <div class="grid-item-content">
+          <img src="https://images.pexels.com/photos/827058/pexels-photo-827058.jpeg?auto=compress&cs=tinysrgb&h=350" />
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
