@@ -1,5 +1,6 @@
-body {
-
+.pageContainer {
+  width: 1300px;
+  margin: auto;
 }
 
 .headerSection {
@@ -37,6 +38,28 @@ body {
   grid-column: auto / span 2;
   grid-row: auto / span 2;
   background-color: lightgreen;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.gridArticle.big .articleTitle {
+  position: absolute;
+  bottom: 10px;
+}
+
+.articleImage {
+  overflow: hidden;
+  /* object-fit: cover; */
+  /* object-position: center; */
+  height: 100%;
+  width: 100%;
+}
+
+.articleImage img {
+  object-fit: cover;
+  /* object-position: center; */
+  height: 100%;
 }
 
 .gridArticle.small {
@@ -53,4 +76,8 @@ body {
 .gridArticle.expanded {
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
+}
+
+.gridArticle.expanded img {
+  width: calc(33.33% - 5px);
 }

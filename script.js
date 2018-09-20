@@ -13,9 +13,14 @@ fetch(req)
         console.log(result.articles[0]);
         // console.log(result.articles[0].title);
 
-        document.getElementsByClassName('articleTitle')[0].innerHTML = result.articles[0].title;
-        document.getElementsByClassName('image')[0].src = result.articles[0].urlToImage;
+      for(i = 0; i < 15; i++) {
+        console.log(i);
+        document.getElementsByClassName('articleTitle')[i].innerHTML = result.articles[i].title;
+        document.getElementsByClassName('image')[i].src = result.articles[i].urlToImage;
+      }
+
     })
+
 
 
 // OUR TOOGLE EXPANDER
