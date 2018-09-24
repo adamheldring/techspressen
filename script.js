@@ -16,8 +16,8 @@ fetch(req)
 
       for(i = 0; i < 15; i++) {
         console.log(i);
-        document.getElementsByClassName('articleTitle')[i].innerHTML = result.articles[i].title;
-        document.getElementsByClassName('articleImage')[i].style.backgroundImage = "url('" + result.articles[i].urlToImage + "')";
+        // document.getElementsByClassName('articleTitle')[i].innerHTML = result.articles[i].title;
+        // document.getElementsByClassName('articleImage')[i].style.backgroundImage = "url('" + result.articles[i].urlToImage + "')";
 
       }
 
@@ -27,7 +27,7 @@ fetch(req)
       const grid = document.getElementById('grid')
 
       //Change 15 to whatever is appropriate and use a variable, also make sure that the CSS grid contains proper amount of rows!!
-      for (i = 0; i < 15; i++) {
+      for (i = 0; i < 20; i++) {
         const newArticle = document.createElement('div')    //Creates new article div
         newArticle.className = "gridArticle small"          //Adds classes to article div
         newArticle.style.background = "grey"                //TEST makes background grey for JS on the fly made article divs
@@ -41,7 +41,6 @@ fetch(req)
         newTitleBox.appendChild(newTitle)                     //TEST appends text to new div
 
         newArticle.appendChild(newTitleBox)                 //Adds title container to article div
-
 
         const newImageBox = document.createElement('div')   //Creates new image container
         newImageBox.className = "articleImage"              //Adds classes image div
