@@ -30,7 +30,6 @@ fetch(req)
       for (i = 0; i < 20; i++) {
         const newArticle = document.createElement('div')    //Creates new article div
         newArticle.className = "gridArticle small"          //Adds classes to article div
-        newArticle.style.background = "grey"                //TEST makes background grey for JS on the fly made article divs
 
         const newTitleBox = document.createElement('div')   //Created new title container
         newTitleBox.className = "articleTitle"              //Adds classes to title div
