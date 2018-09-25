@@ -31,23 +31,29 @@ fetch(req)
         const newArticle = document.createElement('div')    //Creates new article div
         newArticle.className = "gridArticle small"          //Adds classes to article div
 
-        const newTitleBox = document.createElement('div')   //Created new title container
+        const newTitleBox = document.createElement('div')   //Creates new title container
         newTitleBox.className = "articleTitle"              //Adds classes to title div
-
-
-        //Probably best to make title some sort of header instead
-        const newTitle = document.createTextNode(result.articles[i].title)  //TEST writes text in div
-        newTitleBox.appendChild(newTitle)                     //TEST appends text to new div
-
         newArticle.appendChild(newTitleBox)                 //Adds title container to article div
+
+        const newTitleHeader = document.createElement('h1') //Creates new title header
+        newTitleHeader.innerHTML = `${result.articles[i].title}` //Places REAL GOOGLE ARTICLE TITLE inside title header
+        newTitleBox.appendChild(newTitleHeader)             //Adds title header to title container
 
         const newImageBox = document.createElement('div')   //Creates new image container
         newImageBox.className = "articleImage"              //Adds classes image div
-        newImageBox.style.backgroundImage = `url('${result.articles[i].urlToImage}')`;
+        newImageBox.style.backgroundImage = `url('${result.articles[i].urlToImage}')`; //Places REAL GOOGLE ARTICLE IMAGE inside image container
         newArticle.appendChild(newImageBox)                 //Adds image container to article div
 
+        const newInfoBox = document.createElement('div')    //Creates new info container to be shown in expanded articles
+        newInfoBox.className = "infoContainer hidden"       //Adds classes info div
+        newArticle.appendChild(newInfoBox)                  //Adds info container to article div
 
-        grid.appendChild(newArticle)                        //Appends new article to grid
+        // PLACEHOLDER
+        newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
+        // ADDS PROPER INFO
+
+
+        grid.appendChild(newArticle)                        //APPENDS ENTIRE NEW ARTCILE TO ACTUAL GRID/PAGE – SO IT SHOWS!
       }
 
 
@@ -63,9 +69,9 @@ function expand() {
 
 
 // LOOPING THROUGH OUR ARTICELS CHECKING FOR CLICKS
-for (i = 0; i < 15; i++) {
-  document.getElementsByClassName('gridArticle')[i].onclick = expand
-}
+// for (i = 0; i < 15; i++) {
+//   document.getElementsByClassName('gridArticle')[i].onclick = expand
+// }
 
 // EXPERIMENT FUTURE CREATING DIVS
 const box = document.createElement('div')
