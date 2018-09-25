@@ -81,6 +81,20 @@ transform: scale(1.03);
   display: none;
   padding: 15px;
 }
+.articleInfo div.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 500px;
+  background: green;
+}
+ .articleInfo div.button p{
+  color: white;
+  font-weight: 600;
+  
+}
 .gridArticle.expanded .articleInfo {
   display: block;
 }

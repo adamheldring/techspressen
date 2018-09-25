@@ -57,12 +57,15 @@ const createPage = (result) => {
     } else if (result.articles[i].content){
       newDescPara.innerHTML = `${result.articles[i].content}`
     } else {
-      newDescPara.innerHTML = `Error`
+      newDescPara.innerHTML = ``
     }
     console.log(result.articles[i].description)
     newInfoBox.appendChild(newDescPara)
 
-
+    const newButtonDiv = document.createElement('div')
+    newButtonDiv.className = "button"
+    newButtonDiv.innerHTML = "<p>VIEW</p>"
+    newInfoBox.appendChild(newButtonDiv)
 
 
 
