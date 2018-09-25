@@ -62,22 +62,23 @@ const createPage = (result) => {
     newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
     // ADDS PROPER INFO
 
+    newArticle.addEventListener('click', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
 
+    // document.getElementsByClassName('gridArticle')[i].onclick = expand
     grid.appendChild(newArticle)                        //APPENDS ENTIRE NEW ARTCILE TO ACTUAL GRID/PAGE – SO IT SHOWS!
+    //CREATE EVENT LISTENERS        // newArticle.addEventLister
 
-//CREATE EVENT LISTENERS        // newArticle.addEventLister
 }}
 
 // OUR TOOGLE EXPANDER
-// function expand() {
-//   this.classList.toggle('expanded')
-//   console.log(this.classList)
-// }
+function expand() {
+  this.classList.toggle('expanded')
+}
 
 
 // LOOPING THROUGH OUR ARTICELS CHECKING FOR CLICKS
 // for (i = 0; i < 15; i++) {
-  // document.getElementsByClassName('gridArticle')[i].onclick = expand
+
 // }
 
 // EXPERIMENT FUTURE CREATING DIVS
