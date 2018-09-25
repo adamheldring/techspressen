@@ -3,7 +3,7 @@
 // GOOGLE STUFF
 
 var url = 'https://newsapi.org/v2/everything?' +
-          'q=space&' +
+          'q=photography&' +
           'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
 var req = new Request(url);
 fetch(req)
@@ -34,6 +34,10 @@ fetch(req)
         const newTitleBox = document.createElement('div')   //Creates new title container
         newTitleBox.className = "articleTitle"              //Adds classes to title div
         newArticle.appendChild(newTitleBox)                 //Adds title container to article div
+
+        const newAuthorHeader = document.createElement('h2') //Creates new author header
+        newAuthorHeader.innerHTML = `${result.articles[i].author}` //Places REAL GOOGLE ARTICLE TITLE inside title header
+        newTitleBox.appendChild(newAuthorHeader)             //Adds title header to title container//Places REAL GOOGLE ARTICLE TITLE inside title header
 
         const newTitleHeader = document.createElement('h1') //Creates new title header
         newTitleHeader.innerHTML = `${result.articles[i].title}` //Places REAL GOOGLE ARTICLE TITLE inside title header
