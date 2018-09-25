@@ -79,9 +79,10 @@ transform: scale(1.03);
 }
 .articleInfo {
   display: none;
+  padding: 15px;
 }
 .gridArticle.expanded .articleInfo {
-  /* display: block; */
+  display: block;
 }
 .gridContainer {
   width: 100%;
@@ -213,6 +214,7 @@ transform: scale(1.03);
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
   overflow: hidden;
+  flex-direction: row-reverse;
 }
 
 .gridArticle.expanded .articleImageBox {

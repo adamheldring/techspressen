@@ -47,6 +47,30 @@ const createPage = (result) => {
     newTitleHeader.innerHTML = `${result.articles[i].title}` //Places REAL GOOGLE ARTICLE TITLE inside title header
     newTitleBox.appendChild(newTitleHeader)             //Adds title header to title container
 
+    const newInfoBox = document.createElement('div')    //Creates new info container to be shown in expanded articles
+    newInfoBox.className = "articleInfo"              //Adds classes info div
+    newTitleBox.appendChild(newInfoBox)                  //Adds info container to article div
+
+    const newDescPara = document.createElement('p')
+    if (result.articles[i].description){
+      newDescPara.innerHTML = `${result.articles[i].description}` //Places REAL GOOGLE ARTICLE TITLE inside title header
+    } else if (result.articles[i].content){
+      newDescPara.innerHTML = `${result.articles[i].content}`
+    } else {
+      newDescPara.innerHTML = `Error`
+    }
+    console.log(result.articles[i].description)
+    newInfoBox.appendChild(newDescPara)
+
+
+
+
+
+
+
+
+
+
     const newImageBox = document.createElement('div')   //Creates new image container that hides overflow on zoom
     newImageBox.className = "articleImageBox"              //Adds classes image div
     newArticle.appendChild(newImageBox)
@@ -58,12 +82,8 @@ const createPage = (result) => {
     }
     newImageBox.appendChild(newImage)                 //Adds image container to article div
 
-    const newInfoBox = document.createElement('div')    //Creates new info container to be shown in expanded articles
-    newInfoBox.className = "infoContainer articleInfo"       //Adds classes info div
-    newArticle.appendChild(newInfoBox)                  //Adds info container to article div
-
     // PLACEHOLDER
-    newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
+    // newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
     // ADDS PROPER INFO
 
 
