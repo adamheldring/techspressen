@@ -226,20 +226,21 @@ transform: scale(1.03);
   overflow: hidden;
 }
 
-.gridArticle.expanded {
+.gridArticle.expanded:nth-child(1n){
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
   overflow: hidden;
   display: flex;
-  flex-direction: row-reverse;
 }
 
+.gridArticle.expanded:nth-child(1n){
+  flex-direction: row;
+}
 .gridArticle.big.expanded {
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
   overflow: hidden;
   display: flex;
-  flex-direction: row-reverse;
 }
 
 .gridArticle.expanded .articleImageBox {
