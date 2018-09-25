@@ -33,6 +33,7 @@ fetch(req)
 
         const newTitleBox = document.createElement('div')   //Created new title container
         newTitleBox.className = "articleTitle"              //Adds classes to title div
+        newTitleBox.innerHTML = `${result.articles[i].title}` //Places REAL GOOGLE ARTICLE TITLE inside element
 
 
         //Probably best to make title some sort of header instead
@@ -63,9 +64,9 @@ function expand() {
 
 
 // LOOPING THROUGH OUR ARTICELS CHECKING FOR CLICKS
-for (i = 0; i < 15; i++) {
-  document.getElementsByClassName('gridArticle')[i].onclick = expand
-}
+// for (i = 0; i < 15; i++) {
+//   document.getElementsByClassName('gridArticle')[i].onclick = expand
+// }
 
 // EXPERIMENT FUTURE CREATING DIVS
 const box = document.createElement('div')
