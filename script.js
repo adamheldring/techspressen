@@ -26,10 +26,27 @@ const createPage = (result) => {
   const grid = document.getElementById('grid')
 
   //Change 15 to whatever is appropriate and use a variable, also make sure that the CSS grid contains proper amount of rows!!
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 15; i++) {
     // console.log(i)
     const newArticle = document.createElement('div')    //Creates new article div
-    newArticle.className = "gridArticle small"          //Adds classes to article div
+    if (i == 0 || i == 6 || i == 12) {
+      newArticle.className = "gridArticle big"
+    } else {
+      newArticle.className = "gridArticle small"          //Adds classes to article div
+    }
+
+    const newImageBox = document.createElement('div')   //Creates new image container that hides overflow on zoom
+    newImageBox.className = "articleImageBox"              //Adds classes image div
+    newArticle.appendChild(newImageBox)
+
+    const newImage = document.createElement('div')   //Creates new image container with image as background image
+    newImage.className = "articleImage"              //Adds classes image div
+    if (result.articles[i].urlToImage){
+      newImage.style.backgroundImage = `url('${result.articles[i].urlToImage}')`; //Places REAL GOOGLE ARTICLE IMAGE inside image container
+    }
+    newImageBox.appendChild(newImage)                 //Adds image container to article div
+
+    
 
     const newTitleBox = document.createElement('div')   //Creates new title container
     newTitleBox.className = "articleTitle"              //Adds classes to title div
@@ -66,21 +83,6 @@ const createPage = (result) => {
 
 
 
-
-
-
-
-
-    const newImageBox = document.createElement('div')   //Creates new image container that hides overflow on zoom
-    newImageBox.className = "articleImageBox"              //Adds classes image div
-    newArticle.appendChild(newImageBox)
-
-    const newImage = document.createElement('div')   //Creates new image container with image as background image
-    newImage.className = "articleImage"              //Adds classes image div
-    if (result.articles[i].urlToImage){
-      newImage.style.backgroundImage = `url('${result.articles[i].urlToImage}')`; //Places REAL GOOGLE ARTICLE IMAGE inside image container
-    }
-    newImageBox.appendChild(newImage)                 //Adds image container to article div
 
     // PLACEHOLDER
     // newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
