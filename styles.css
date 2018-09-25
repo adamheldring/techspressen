@@ -91,7 +91,7 @@ transform: scale(1.03);
 }
 
 .gridArticle .articleImage {
-  background-image: url("");
+  background-image: url("https://cdn.vox-cdn.com/thumbor/uFgd8HtGxhl3NSKKQUBNX8hrjgs=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13151871/lumixs_vladsavov.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -190,18 +190,32 @@ transform: scale(1.03);
   width: 50%;
 }
 
-.gridArticle.small .articleImage {
+.big .articleImageBox {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.small .articleImageBox {
+  overflow: hidden;
   width: 50%;
+}
+
+.gridArticle.small .articleImage {
+  width: 100%;
   overflow: hidden;
 }
 
 .gridArticle.expanded {
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
+  overflow: hidden;
 }
+
 
 .gridArticle.expanded .articleImage {
   width: 33%;
+  background-image: url(https://cdn.vox-cdn.com/thumbor/uFgd8HtGxhl3NSKKQUBNX8hrjgs=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13151871/lumixs_vladsavov.jpg);
 }
 
 .gridArticle.expanded.small p {
