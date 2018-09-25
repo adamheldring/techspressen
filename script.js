@@ -68,6 +68,13 @@ const createPage = (result) => {
     newInfoBox.className = "articleInfo"              //Adds classes info div
     newTitleBox.appendChild(newInfoBox)                  //Adds info container to article div
 
+    const newPubDate = document.createElement('p')
+    newPubDate.className = "datePublished"
+    if (result.articles[i].publishedAt) {
+      newPubDate.innerHTML = result.articles[i].publishedAt
+      newInfoBox.appendChild(newPubDate)
+    }
+
     const newDescPara = document.createElement('p')
     if (result.articles[i].description){
       newDescPara.innerHTML = `${result.articles[i].description}` //Places REAL GOOGLE ARTICLE TITLE inside title header
@@ -76,8 +83,8 @@ const createPage = (result) => {
     } else {
       newDescPara.innerHTML = ``
     }
-    console.log(result.articles[i].description)
     newInfoBox.appendChild(newDescPara)
+
 
     const newButtonLink = document.createElement('a')
     newButtonLink.className = "button"
@@ -85,13 +92,11 @@ const createPage = (result) => {
       newButtonLink.href = `${result.articles[i].url}`
       newButtonLink.target = '_blank'
       newButtonLink.innerHTML = "<p>VIEW</p>"
+    } else {
+      newButtonLink.href = "#"
     }
     newInfoBox.appendChild(newButtonLink)
 
-
-    // PLACEHOLDER
-    // newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
-    // ADDS PROPER INFO
 
 
     newArticle.addEventListener('click', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
@@ -103,9 +108,7 @@ const createPage = (result) => {
 }}
 
 // OUR TOOGLE EXPANDER
-function expand(e) {
-  // const info = e.target.getElementsByClassName('infoContainer hidden')[0]
-  console.log()
+function expand() {
   this.classList.toggle('expanded')
 }
 
