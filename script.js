@@ -21,7 +21,6 @@ fetch(req)
 
       }
 
-
       // CREATING ELEMENTS ON THE FLY
 
       const grid = document.getElementById('grid')
@@ -58,6 +57,8 @@ fetch(req)
 
 
         grid.appendChild(newArticle)                        //APPENDS ENTIRE NEW ARTCILE TO ACTUAL GRID/PAGE – SO IT SHOWS!
+
+//CREATE EVENT LISTENERS        // newArticle.addEventLister
       }
 
 
@@ -74,8 +75,8 @@ function expand() {
 
 // LOOPING THROUGH OUR ARTICELS CHECKING FOR CLICKS
 // for (i = 0; i < 15; i++) {
-//   document.getElementsByClassName('gridArticle')[i].onclick = expand
+  document.getElementsByClassName('gridArticle')[i].onclick = expand
 // }
 
 // EXPERIMENT FUTURE CREATING DIVS
-const box = document.createElement('div')
+// const box = document.createElement('div')
