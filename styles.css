@@ -38,6 +38,14 @@ p {
 .sectionHeader {
 }
 
+.articleImage {
+  transition: transform .2s;
+}
+
+.articleImage:hover {
+transform: scale(1.03);
+}
+
 .topContainer {
   display: flex;
   justify-content: space-around;
@@ -133,6 +141,7 @@ p {
   display: flex;
   flex-flow: row nowrap;
   background-color: white;
+  overflow: hidden;
 }
 
 .gridArticle.small:nth-child(5n), .gridArticle.small:nth-child(5n-1) {
