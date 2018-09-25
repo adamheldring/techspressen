@@ -47,12 +47,16 @@ const createPage = (result) => {
     newTitleHeader.innerHTML = `${result.articles[i].title}` //Places REAL GOOGLE ARTICLE TITLE inside title header
     newTitleBox.appendChild(newTitleHeader)             //Adds title header to title container
 
-    const newImageBox = document.createElement('div')   //Creates new image container
-    newImageBox.className = "articleImage"              //Adds classes image div
+    const newImageBox = document.createElement('div')   //Creates new image container that hides overflow on zoom
+    newImageBox.className = "articleImageBox"              //Adds classes image div
+    newArticle.appendChild(newImageBox)
+
+    const newImage = document.createElement('div')   //Creates new image container with image as background image
+    newImage.className = "articleImage"              //Adds classes image div
     if (result.articles[i].urlToImage){
-      newImageBox.style.backgroundImage = `url('${result.articles[i].urlToImage}')`; //Places REAL GOOGLE ARTICLE IMAGE inside image container
+      newImage.style.backgroundImage = `url('${result.articles[i].urlToImage}')`; //Places REAL GOOGLE ARTICLE IMAGE inside image container
     }
-    newArticle.appendChild(newImageBox)                 //Adds image container to article div
+    newImageBox.appendChild(newImage)                 //Adds image container to article div
 
     const newInfoBox = document.createElement('div')    //Creates new info container to be shown in expanded articles
     newInfoBox.className = "infoContainer hidden"       //Adds classes info div
@@ -72,7 +76,7 @@ const createPage = (result) => {
 }}
 
 // OUR TOOGLE EXPANDER
-function expand() {
+function expand(number) {
   this.classList.toggle('expanded')
 }
 
