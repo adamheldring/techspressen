@@ -59,7 +59,7 @@ const createPage = (result) => {
     newImageBox.appendChild(newImage)                 //Adds image container to article div
 
     const newInfoBox = document.createElement('div')    //Creates new info container to be shown in expanded articles
-    newInfoBox.className = "infoContainer hidden"       //Adds classes info div
+    newInfoBox.className = "infoContainer articleInfo"       //Adds classes info div
     newArticle.appendChild(newInfoBox)                  //Adds info container to article div
 
     // PLACEHOLDER
@@ -76,7 +76,9 @@ const createPage = (result) => {
 }}
 
 // OUR TOOGLE EXPANDER
-function expand(number) {
+function expand(e) {
+  // const info = e.target.getElementsByClassName('infoContainer hidden')[0]
+  console.log()
   this.classList.toggle('expanded')
 }
 

@@ -77,8 +77,11 @@ transform: scale(1.03);
   height: auto;
 
 }
-.hidden {
+.articleInfo {
   display: none;
+}
+.gridArticle.expanded .articleInfo {
+  /* display: block; */
 }
 .gridContainer {
   width: 100%;
