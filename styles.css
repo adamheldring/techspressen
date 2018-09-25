@@ -215,9 +215,17 @@ transform: scale(1.03);
   overflow: hidden;
 }
 
+.gridArticle.expanded .articleImageBox {
+  width: 33%;
+}
+
+.gridArticle.expanded .articleTitle {
+  width: 67%;
+}
 
 .gridArticle.expanded .articleImage {
-  width: 33%;
+  justify-content: flex-start;
+  width: 100%;
   background-image: url(https://cdn.vox-cdn.com/thumbor/uFgd8HtGxhl3NSKKQUBNX8hrjgs=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13151871/lumixs_vladsavov.jpg);
 }
 
