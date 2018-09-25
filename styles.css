@@ -2,17 +2,7 @@ body {
   background-color: #f2f2f2;
 }
 
-h1 {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-}
 
-h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-}
 
 p {
   font-family: 'Roboto', sans-serif;
@@ -31,6 +21,9 @@ p {
 }
 
 .sectionHeader h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
   border-top: 2px solid #004650;
   color: #1d222c
 }
@@ -185,10 +178,10 @@ transform: scale(1.03);
   text-transform: uppercase;
 }
 
-.gridArticle.small p {
+/* .gridArticle.small p {
   display: none;
   color: #2e2e2e;
-}
+} */
 
 .gridArticle.small .articleTitle {
   width: 50%;
@@ -223,6 +216,10 @@ transform: scale(1.03);
 
 .gridArticle.expanded .articleTitle {
   width: 67%;
+}
+
+.gridArticle.expanded  h1 {
+
 }
 
 .gridArticle.expanded .articleImage {
