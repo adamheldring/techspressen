@@ -62,6 +62,7 @@ const createPage = (result) => {
     newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
     // ADDS PROPER INFO
 
+
     newArticle.addEventListener('click', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
 
     // document.getElementsByClassName('gridArticle')[i].onclick = expand
