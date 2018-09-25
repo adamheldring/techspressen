@@ -46,7 +46,7 @@ const createPage = (result) => {
     }
     newImageBox.appendChild(newImage)                 //Adds image container to article div
 
-    
+
 
     const newTitleBox = document.createElement('div')   //Creates new title container
     newTitleBox.className = "articleTitle"              //Adds classes to title div
@@ -79,12 +79,14 @@ const createPage = (result) => {
     console.log(result.articles[i].description)
     newInfoBox.appendChild(newDescPara)
 
-    const newButtonDiv = document.createElement('div')
-    newButtonDiv.className = "button"
-    newButtonDiv.innerHTML = "<p>VIEW</p>"
-    newInfoBox.appendChild(newButtonDiv)
-
-
+    const newButtonLink = document.createElement('a')
+    newButtonLink.className = "button"
+    if (result.articles[i].description) {
+      newButtonLink.href = `${result.articles[i].url}`
+      newButtonLink.target = '_blank'
+      newButtonLink.innerHTML = "<p>VIEW</p>"
+    }
+    newInfoBox.appendChild(newButtonLink)
 
 
     // PLACEHOLDER
