@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
   font-size: 14px;
 }
 
@@ -18,7 +18,7 @@ p {
 }
 
 .sectionHeader h1 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: '', sans-serif;
   font-weight: 600;
   font-size: 24px;
   padding-top: 8px;
@@ -55,7 +55,8 @@ transform: scale(1.03);
   color: #053f48;
   text-align: left;
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'neue-haas-grotesk-display
+', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.2;
@@ -132,11 +133,10 @@ transform: scale(1.03);
   text-align: center;
   display: inline;
   padding: 2px 0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   font-size: 21px;
   line-height: 1.3;
-  text-transform: uppercase;
   box-shadow: 7px 0 0 #000, -7px 0 0 #000;
 }
 
@@ -176,19 +176,18 @@ transform: scale(1.03);
   color: #2e2e2e;
   text-align: left;
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.2;
   padding-left: 15px;
   padding-right: 15px;
-  text-transform: uppercase;
 }
 
 .gridArticle.small h2 {
   text-align: left;
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   /* font-style: italic; */
   color: #fc6867;
@@ -197,7 +196,7 @@ transform: scale(1.03);
   padding-top: 3px;
   padding-left: 15px;
   padding-right: 15px;
-  text-transform: uppercase;
+  text-transform: uppercase; 
 }
 
 /* .gridArticle.small p {
@@ -267,7 +266,6 @@ transform: scale(1.03);
   font-weight: 600;
   font-size: 21px;
   line-height: 1.3;
-  text-transform: uppercase;
   box-shadow: none;
 }
 
@@ -275,7 +273,7 @@ transform: scale(1.03);
 .gridArticle.big.expanded h2 {
   text-align: left;
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   /* font-style: italic; */
   color: #fc6867;
@@ -284,7 +282,6 @@ transform: scale(1.03);
   padding-top: 3px;
   padding-left: 15px;
   padding-right: 15px;
-  text-transform: uppercase;
 }
 
 .gridArticle.expanded .articleImage {
