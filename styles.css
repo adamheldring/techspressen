@@ -205,6 +205,22 @@ transform: scale(1.03);
   text-transform: uppercase;
 }
 
+.gridArticle.big h2 {
+  position: relative;
+  width: 100px;
+  left: 15px;
+  background-color: black;
+  text-align: left;
+  display: block;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 3px 0;
+  text-transform: uppercase;
+  max-width: 90%;
+}
 /* .gridArticle.small p {
   display: none;
   color: #2e2e2e;
