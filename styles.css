@@ -131,6 +131,7 @@ transform: scale(1.03);
 
 .gridArticle.big h1 {
   position: relative;
+  width: 100px;
   left: 15px;
   background-color: black;
   text-align: center;
@@ -141,6 +142,7 @@ transform: scale(1.03);
   font-size: 21px;
   line-height: 1.3;
   box-shadow: 7px 0 0 #000, -7px 0 0 #000;
+  max-width: 90%;
 }
 
 .gridArticle.big .articleTitle {
@@ -148,6 +150,7 @@ transform: scale(1.03);
   bottom: 30px;
   color: white;
   display: inline;
+  max-width: 90%;
 }
 
 .gridArticle.big .articleImage {
