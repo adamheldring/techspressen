@@ -439,6 +439,51 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  .pageContainer {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+  }
+
+  .topSection {
+    display: none;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: black;
+    height: 100px;
+    margin: 0px;
+    background-color: #ffffff;
+  }
+
+  .navbar li {
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    float: right;
+    display: block;
+    text-align: center;
+    padding-right: 25px;
+    padding-left: 30px;
+  }
+
+  .headerImage img {
+    width: 50%;
+    display: inline;
+   float: left;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 40px; */
+    padding-top: 30px;
+  }
+
   .gridArticle.big {
     grid-column: auto / span 6;
     grid-row: auto / span 2;
@@ -455,8 +500,27 @@ p {
     background-color: white;
     overflow: hidden;
   }
+
   .gridArticle.small:nth-child(n) {
     flex-flow: row nowrap;
     /* background-color: pink; */
   }
+
+  .gridArticle.big.expanded, .gridArticle.small.expanded {
+    grid-column: auto / span 6;
+    grid-row: auto / span 4;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .gridArticle.expanded .articleImageBox {
+    width: 100%;
+    height: 50%;
+  }
+
+  .gridArticle.expanded .articleTitle {
+    width: 100%;
+    heiht: 50%;
+  }
+
 }
