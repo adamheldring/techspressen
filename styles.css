@@ -295,6 +295,12 @@ transform: scale(1.03);
   color: black;
 }
 
+.gridArticle.expanded .datePublished {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  color: purple; // Charlotte to replace!
+}
+
 .footer {
   background-color: red;
 }
