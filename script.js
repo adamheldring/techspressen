@@ -71,7 +71,14 @@ const createPage = (result) => {
     const newPubDate = document.createElement('p')
     newPubDate.className = "datePublished"
     if (result.articles[i].publishedAt) {
-      newPubDate.innerHTML = result.articles[i].publishedAt
+      const timeDiff = Math.floor((new Date() - Date.parse(result.articles[i].publishedAt)) / (1000*60*60*24)) // Calculates number of days between today and publication date
+        if (timeDiff == 0) {
+          newPubDate.innerHTML = "Today"
+        } else if (timeDiff == 1) {
+          newPubDate.innerHTML = "Yesterday"
+        } else {
+      newPubDate.innerHTML = timeDiff + " days ago"
+    }
       newInfoBox.appendChild(newPubDate)
     }
 
