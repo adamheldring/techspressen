@@ -5,27 +5,30 @@ let totalNrArticles = 0
 let totalNrCategory = 0
 let generateNr = 0
 let categoryNr = 0
-
+const maxNrCatArticles = 15
 
 // GOOGLE STUFF
 
-var url = 'https://newsapi.org/v2/everything?' +
-          'q=photography&' +
-          'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
-var req = new Request(url);
-fetch(req)
-    .then(function(response) {
-        return response.json();
-    }).then(function(result){
-        console.log(result.articles);
-    // }).catch(error => {
-    //     console.log(error)
+const requestNewCategory = (categoryUrl, catName) => {
+  console.log('Hello from request new category')
+  // var url = 'https://newsapi.org/v2/everything?' +
+  //           'q=photography&' +
+  //           'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
+  var req = new Request(categoryUrl);
+  fetch(req)
+      .then(function(response) {
+          return response.json();
+      }).then(function(result){
+          console.log(result.articles);
+      // }).catch(error => {
+      //     console.log(error)
 
-        createPage(result);
-      })
+          createPage(result, catName);
+        })
+}
 
 
-const createPage = (result) => {
+const createPage = (result, catName) => {
   // CREATING ELEMENTS ON THE FLY
 
   categoryNr++ //Moves on to next catogory
@@ -35,8 +38,8 @@ const createPage = (result) => {
 
 
   // Generates as many articles as returned from google but a max of 15
-  if (result.articles.length > 15 ) {
-      generateNr = 15
+  if (result.articles.length > maxNrCatArticles ) {
+      generateNr = maxNrCatArticles
   } else {
     generateNr = result.articles.length
   }
@@ -45,7 +48,8 @@ const createPage = (result) => {
 
   console.log(totalNrCategory)
   console.log(totalNrArticles)
-  document.getElementById('headerCat1').innerHTML += `<br> (Articles in this category: ${totalNrCategory}, Total number of articles ${totalNrArticles}`
+  document.getElementById('headerCat' + categoryNr).innerHTML = `${catName}<br>(${totalNrCategory} articles)`
+  document.getElementById('totalArticles').innerHTML =  `(Total number of articles: ${totalNrArticles})`
 
 
   for (i = 0; i < generateNr; i++) {
@@ -142,11 +146,26 @@ function expand(e) {
   this.classList.toggle('expanded')
 }
 
+//IMPORTANT!
+//Call for new category
 
-// LOOPING THROUGH OUR ARTICELS CHECKING FOR CLICKS
-// for (i = 0; i < 15; i++) {
 
-// }
+const catName1 = "PHOTOGRAPHY"
+const photographyUrl = 'https://newsapi.org/v2/everything?' +
+            'q=photography&' +
+            'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
 
-// EXPERIMENT FUTURE CREATING DIVS
-// const box = document.createElement('div')
+const catName2 = "SPACE"
+const spaceUrl = 'https://newsapi.org/v2/everything?' +
+            'q=space&' +
+            'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
+
+const catName3 = "HOMEBREW"
+const homebrewUrl = 'https://newsapi.org/v2/everything?' +
+            'q=homebrew&' +
+            'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
+
+
+requestNewCategory(photographyUrl, catName1)
+requestNewCategory(spaceUrl, catName2)
+requestNewCategory(homebrewUrl, catName3)
