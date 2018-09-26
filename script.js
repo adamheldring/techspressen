@@ -10,7 +10,7 @@ fetch(req)
     .then(function(response) {
         return response.json();
     }).then(function(result){
-        console.log(result.articles[0]);
+        console.log(result.articles);
     // }).catch(error => {
     //     console.log(error)
 
@@ -91,18 +91,18 @@ const createPage = (result) => {
     } else {
       newDescPara.innerHTML = ``
     }
-    console.log(result.articles[i].description)
     newInfoBox.appendChild(newDescPara)
 
     const newButtonLink = document.createElement('a')
     newButtonLink.className = "button"
-    if (result.articles[i].description) {
+    if (result.articles[i].url) {
       newButtonLink.href = `${result.articles[i].url}`
       newButtonLink.target = '_blank'
       newButtonLink.innerHTML = "<p>VIEW</p>"
+      newInfoBox.appendChild(newButtonLink)
     } else {
       newButtonLink.href = "#"
-    newInfoBox.appendChild(newButtonLink)
+      newInfoBox.appendChild(newButtonLink)
     }
 
 
@@ -123,7 +123,6 @@ const createPage = (result) => {
 // OUR TOOGLE EXPANDER
 function expand(e) {
   // const info = e.target.getElementsByClassName('infoContainer hidden')[0]
-  console.log()
   this.classList.toggle('expanded')
 }
 
