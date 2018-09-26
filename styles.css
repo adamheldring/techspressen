@@ -103,6 +103,10 @@ transform: scale(1.03);
   grid-gap: 10px;
   grid-auto-flow: row dense;
 }
+.gridArticle.big h1:hover, .gridArticle.small .articleTitle h1:hover {
+  color: #1dafec
+  /* color: #a4a4a4 */
+}
 
 .gridArticle .articleImage {
   background-image: url("https://cdn.vox-cdn.com/thumbor/uFgd8HtGxhl3NSKKQUBNX8hrjgs=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13151871/lumixs_vladsavov.jpg");
