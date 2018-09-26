@@ -1,5 +1,11 @@
 // This is the js file
 
+//Global variables
+let totalNrArticles = 0
+let totalNrCategory = 0
+let generateNr = 0
+
+
 // GOOGLE STUFF
 
 var url = 'https://newsapi.org/v2/everything?' +
@@ -26,7 +32,23 @@ const createPage = (result) => {
   const grid = document.getElementById('grid')
 
   //Change 15 to whatever is appropriate and use a variable, also make sure that the CSS grid contains proper amount of rows!!
-  for (i = 0; i < 15; i++) {
+
+
+  // Generates as many articles as returned from google but a max of 15
+  if (result.articles.length > 15 ) {
+      generateNr = 15
+  } else {
+    generateNr = result.articles.length
+  }
+  totalNrCategory = generateNr  //Sets number of articles in this category
+  totalNrArticles += totalNrCategory  //Adds number of articles in this catogory to total nr of articles
+
+  console.log(totalNrCategory)
+  console.log(totalNrArticles)
+  document.getElementById('headerCat1').innerHTML += `<br> (Articles in this category: ${totalNrCategory}, Total number of articles ${totalNrArticles}`
+
+
+  for (i = 0; i < generateNr; i++) {
     // console.log(i)
     const newArticle = document.createElement('div')    //Creates new article div
     if (i == 0 || i == 6 || i == 12) {
@@ -70,14 +92,15 @@ const createPage = (result) => {
 
     const newPubDate = document.createElement('p')
     newPubDate.className = "datePublished"
+    const hoursToday = new Date().getHours()
     if (result.articles[i].publishedAt) {
-      const timeDiff = Math.floor((new Date() - Date.parse(result.articles[i].publishedAt)) / (1000*60*60*24)) // Calculates number of days between today and publication date
-        if (timeDiff == 0) {
+      const timeDiff = Math.round((new Date() - Date.parse(result.articles[i].publishedAt)) / (1000*60*60)) // Calculates number of hours between today and publication date
+        if (timeDiff <= hoursToday) {          // If number of hours is less than hours so far in today, then print 'today'
           newPubDate.innerHTML = "Today"
-        } else if (timeDiff == 1) {
+        } else if (timeDiff > hoursToday && timeDiff <= hoursToday + 24) {          // If number of hours is more than hours so far in today, but less than hours in today + 24, then print 'today'
           newPubDate.innerHTML = "Yesterday"
         } else {
-      newPubDate.innerHTML = timeDiff + " days ago"
+      newPubDate.innerHTML = Math.round(timeDiff/24) + " days ago"
     }
       newInfoBox.appendChild(newPubDate)
     }
@@ -104,13 +127,6 @@ const createPage = (result) => {
       newButtonLink.href = "#"
       newInfoBox.appendChild(newButtonLink)
     }
-
-
-
-    // PLACEHOLDER
-    // newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
-    // ADDS PROPER INFO
-
 
     newArticle.addEventListener('click', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
 
