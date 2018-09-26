@@ -4,6 +4,7 @@
 let totalNrArticles = 0
 let totalNrCategory = 0
 let generateNr = 0
+let categoryNr = 0
 
 
 // GOOGLE STUFF
@@ -24,12 +25,11 @@ fetch(req)
       })
 
 
-
-
 const createPage = (result) => {
   // CREATING ELEMENTS ON THE FLY
 
-  const grid = document.getElementById('grid')
+  categoryNr++ //Moves on to next catogory
+  const grid = document.getElementById('grid' + categoryNr)
 
   //Change 15 to whatever is appropriate and use a variable, also make sure that the CSS grid contains proper amount of rows!!
 
