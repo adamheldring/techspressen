@@ -2,6 +2,12 @@ body {
   background-color: #f2f2f2;
 }
 
+.pageContainer {
+  width: 1300px;
+  margin: auto;
+  margin-top: 10%;
+}
+
 p {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-size: 16px;
@@ -10,20 +16,43 @@ p {
   letter-spacing: 0.5px;
 }
 
-.headerSection {
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: black;
+  height: 100px;
+  margin: 0px;
+  background-color: #ffffff;
+}
+
+.navbar li {
+  float: right;
   display: block;
-  background-color: pink;
+  text-align: center;
+  padding-right: 25px;
+  padding-left: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2.8px;
 }
 
-.pageContainer {
-  width: 1300px;
-  margin: auto;
-  margin-top: 30px;
+.headerImage img {
+  width: 25%;
+  display: inline;
+ float: left;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 40px; */
+  padding-top: 30px;
 }
 
-.headerSection img {
-  width: 60%;
-
+.headerSection {
+  width: 100%;
 }
 
 .sectionHeader h1 {
@@ -140,7 +169,7 @@ p {
   /* background: #366b72; */
   background: #fc6867;
   text-decoration: none;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
  .articleInfo a.button p{
