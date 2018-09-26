@@ -1,5 +1,11 @@
 // This is the js file
 
+//Global variables
+let totalNrArticles = 0
+let totalNrCategory = 0
+let generateNr = 0
+
+
 // GOOGLE STUFF
 
 var url = 'https://newsapi.org/v2/everything?' +
@@ -26,7 +32,23 @@ const createPage = (result) => {
   const grid = document.getElementById('grid')
 
   //Change 15 to whatever is appropriate and use a variable, also make sure that the CSS grid contains proper amount of rows!!
-  for (i = 0; i < 15; i++) {
+
+
+  // Generates as many articles as returned from google but a max of 15
+  if (result.articles.length > 15 ) {
+      generateNr = 15
+  } else {
+    generateNr = result.articles.length
+  }
+  totalNrCategory = generateNr  //Sets number of articles in this category
+  totalNrArticles += totalNrCategory  //Adds number of articles in this catogory to total nr of articles
+
+  console.log(totalNrCategory)
+  console.log(totalNrArticles)
+  document.getElementById('headerCat1').innerHTML += `<br> (Articles in this category: ${totalNrCategory}, Total number of articles ${totalNrArticles}`
+
+
+  for (i = 0; i < generateNr; i++) {
     // console.log(i)
     const newArticle = document.createElement('div')    //Creates new article div
     if (i == 0 || i == 6 || i == 12) {
@@ -105,13 +127,6 @@ const createPage = (result) => {
       newButtonLink.href = "#"
       newInfoBox.appendChild(newButtonLink)
     }
-
-
-
-    // PLACEHOLDER
-    // newInfoBox.innerHTML = `Info yay!` //Places REAL GOOGLE ARTICLE TITLE inside title header
-    // ADDS PROPER INFO
-
 
     newArticle.addEventListener('click', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
 
