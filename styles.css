@@ -398,3 +398,26 @@ p {
 .footer {
   background-color: red;
 }
+
+@media screen and (max-width: 600px) {
+  .gridArticle.big {
+    grid-column: auto / span 6;
+    grid-row: auto / span 2;
+    display: static;
+    background-color: white;
+    width: 100%;
+  }
+
+  .gridArticle.small {
+    grid-column: auto / span 6;
+    grid-row: auto / span 1;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: white;
+    overflow: hidden;
+  }
+  .gridArticle.small:nth-child(n) {
+    flex-flow: row nowrap;
+    /* background-color: pink; */
+  }
+}
