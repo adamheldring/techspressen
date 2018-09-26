@@ -55,8 +55,7 @@ transform: scale(1.03);
   color: #053f48;
   text-align: left;
   display: block;
-  font-family: 'neue-haas-grotesk-display
-', sans-serif;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.2;
@@ -100,6 +99,10 @@ transform: scale(1.03);
   grid-auto-rows: 200px;
   grid-gap: 10px;
   grid-auto-flow: row dense;
+}
+.gridArticle.big h1:hover, .gridArticle.small .articleTitle h1:hover {
+  color: #1dafec
+  /* color: #a4a4a4 */
 }
 
 .gridArticle .articleImage {
@@ -196,7 +199,7 @@ transform: scale(1.03);
   padding-top: 3px;
   padding-left: 15px;
   padding-right: 15px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 /* .gridArticle.small p {
