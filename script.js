@@ -152,19 +152,19 @@ function expand(e) {
 //Call for new category
 
 
-const catName1 = "PHOTOGRAPHY"
+const catName1 = "FUTURE TECHNOLOGY"
 const photographyUrl = 'https://newsapi.org/v2/everything?' +
-            'q=photography&' +
+            'q=future+tech&' +
             'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
 
-const catName2 = "SPACE"
+const catName2 = "SPACE EXPLORATION"
 const spaceUrl = 'https://newsapi.org/v2/everything?' +
-            'q=space&' +
+            'q=space+exploration&' +
             'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
 
-const catName3 = "HOMEBREW"
+const catName3 = "AUGMENTED REALITY"
 const homebrewUrl = 'https://newsapi.org/v2/everything?' +
-            'q=homebrew&' +
+            'q=augmented+reality&' +
             'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
 
 
