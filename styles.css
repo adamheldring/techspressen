@@ -25,7 +25,8 @@ p {
   z-index: 10;
   position: fixed;
   top: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 1300px;
   height: 100px;
   margin: 0px;
   background-color: #ffffff;
@@ -45,7 +46,8 @@ p {
 }
 
 .headerSection {
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .headerLinkContainer {
@@ -53,17 +55,28 @@ p {
   flex-flow: row nowrap;
   margin-right: 30px;
 }
+.headerLinkContainer ul{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-right: 30px;
+}
+.headerLinkContainer ul li {
+  /* background: yellow; */
+  font-size: 18px;
+}
 
 .headerImage {
-  height: 100%;
-  display: inline;
+  /* height: auto;
+  display: inline; */
+  display: flex;
+  align-items: center;
 }
 
 .headerImage img {
-  width: 25%;
+  width: 400px;
   margin-left: 30px;
 }
-
 
 .sectionHeader h1 {
   font-family: 'neue-haas-grotesk-display', sans-serif;
