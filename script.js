@@ -15,27 +15,29 @@ const requestNewCategory = (categoryUrl, catName) => {
   //           'q=photography&' +
   //           'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
   var req = new Request(categoryUrl);
-  fetch(req)
+  return fetch(req)
       .then(function(response) {
           return response.json();
       }).then(function(result){
           console.log(result.articles);
-      // }).catch(error => {
-      //     console.log(error)
+          try {
+            createPage(result, catName);
 
-          createPage(result, catName);
+          } catch (createPageError) {
+            console.log("Error when creating page", createPageError);
+          }
+      }).catch((error) => {
+          console.log(error)
         })
 }
 
 
 const createPage = (result, catName) => {
   // CREATING ELEMENTS ON THE FLY
-
   categoryNr++ //Moves on to next catogory
   const grid = document.getElementById('grid' + categoryNr)
 
   //Change 15 to whatever is appropriate and use a variable, also make sure that the CSS grid contains proper amount of rows!!
-
 
   // Generates as many articles as returned from google but a max of 15
   if (result.articles.length > maxNrCatArticles ) {
@@ -166,6 +168,8 @@ const homebrewUrl = 'https://newsapi.org/v2/everything?' +
             'apiKey=3934b18b3b584fcdbdfbae1b25021f3a';
 
 
-requestNewCategory(photographyUrl, catName1)
-requestNewCategory(spaceUrl, catName2)
-requestNewCategory(homebrewUrl, catName3)
+requestNewCategory(photographyUrl, catName1).then(() => {
+  return requestNewCategory(spaceUrl, catName2)
+}).then(() => {
+  requestNewCategory(homebrewUrl, catName3)
+})
