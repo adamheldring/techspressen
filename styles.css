@@ -205,7 +205,7 @@ p {
 }
 
 .gridArticle .articleImage {
-  background-image: url("https://cdn.vox-cdn.com/thumbor/uFgd8HtGxhl3NSKKQUBNX8hrjgs=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13151871/lumixs_vladsavov.jpg");
+  background-image: url(./images/wasp.png);
   background-size: cover;
   background-position: center;
   width: 100%;
