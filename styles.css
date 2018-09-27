@@ -235,21 +235,31 @@ p {
   background-color: black;
   text-align: center;
   display: inline;
-  padding: 2px 0;
+  padding: 2px 0px;
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   font-size: 21px;
   line-height: 1.3;
   box-shadow: 7px 0 0 #000, -7px 0 0 #000;
+  box-decoration-break: clone;
   max-width: 90%;
 }
 
 .gridArticle.big h2 {
   position: relative;
+  width: 90%;
   left: 15px;
+  text-align: left;
+  display: block;
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  color: #fc6867;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 3px 0;
+  text-transform: uppercase;
+  max-width: 90%;
+  display: none;
 }
 
 .gridArticle.big .articleTitle {
@@ -312,22 +322,7 @@ p {
   text-transform: uppercase;
 }
 
-.gridArticle.big h2 {
-  position: relative;
-  width: 100px;
-  left: 15px;
-  background-color: black;
-  text-align: left;
-  display: block;
-  font-family: 'neue-haas-grotesk-display', sans-serif;
-  font-weight: 600;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.2;
-  padding: 3px 0;
-  text-transform: uppercase;
-  max-width: 90%;
-}
+
 /* .gridArticle.small p {
   display: none;
   color: #2e2e2e;
