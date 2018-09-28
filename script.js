@@ -84,7 +84,7 @@ const createPage = (result, catName) => {
     if (result.articles[i].author){
       newAuthorHeader.innerHTML = `${result.articles[i].author}` //Places REAL GOOGLE ARTICLE TITLE inside title header
     } else {
-      newAuthorHeader.innerHTML = `Anon` //Places REAL GOOGLE ARTICLE TITLE inside title header
+      newAuthorHeader.innerHTML = `Anonymous` //Places REAL GOOGLE ARTICLE TITLE inside title header
     }
     newTitleBox.appendChild(newAuthorHeader)             //Adds title header to title container//Places REAL GOOGLE ARTICLE TITLE inside title header
 
