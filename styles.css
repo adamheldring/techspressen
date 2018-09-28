@@ -86,14 +86,16 @@ p {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
   font-size: 24px;
-  padding-top: 8px;
+  padding-top: 28px;
+  padding-bottom: 20px;
   border-top: 2px solid #2e2e2e;
   color: #1d222c;
 }
 
 .sectionHeader {
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 30px;
+  /* padding-top: 50px; */
 }
 
 .articleImage {
@@ -204,6 +206,15 @@ p {
   font-weight: 600;
 
 }
+#totalArticles{
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  border-top: 2px solid #2e2e2e;
+  padding-top: 25px;
+  margin-bottom: -20px;
+}
+
 .gridArticle.expanded .articleInfo {
   display: block;
 }
