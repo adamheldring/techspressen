@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
+
 <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://use.typekit.net/lgh8cir.css">
@@ -11,88 +12,95 @@
 </head>
   <body>
 
-    <!-- Header section -->
-    <div class="headerSection">
+    <header class="headerSection">
       <div class="navbar" id="navbar">
         <div class="headerImage">
-          <img src="./images/Techspressen.png" />
+          <img src="./images/Techspressen.png" alt="Techspressen logo"/>
         </div>
-        <div class="headerLinkContainer">
+        <nav class="headerLinkContainer" autofocus>
           <ul>
             <li><a href="#menuDest1">FUTURE TECHNOLOGY</a></li>
             <li><a href="#headerCat2">SPACE EXPLORATION</a></li>
             <li><a href="#headerCat3">AUGMENTED REALITY</a></li>
           </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pageContainer">
+
+    <!-- Editorial section, top articles -->
+      <section class="topSection">
+        <div class="sectionHeader"><h1>Editors' picks</h1></div>
+        <div class="topContainer">
+
+          <a class="topArticle" target="_blank" href="https://www.expressen.se/nyheter/val-2018/valresultat/">
+            <div>
+              <div class="topImage"><img src="./images/valresultat.png" alt="Election results graph"></div>
+              <h2>7 sep 2018</h2>
+              <h1>Valresultat &ndash; se vem som vinner valet d&auml;r du bor</h1>
+            </div>
+          </a>
+
+          <a class="topArticle" target="_blank" href="https://www.expressen.se/dinapengar/tech/iphone-xr-darfor-ska-du-kopa-billigaste-telefonen/">
+            <div>
+              <div class="topImage"><img src="./images/apple-watch.png" alt="New Apple products"></div>
+              <h2>12 sep 2018</h2><h1>Nya Iphone X &auml;r h&auml;r &ndash; s&aring; ser de tre nya modellerna ut</h1>
+            </div>
+          </a>
+
+          <a class="topArticle" target="_blank" href="https://www.expressen.se/nyheter/inloggad/maxa-priset-pa-ditt-hus-nar-du-saljer-/">
+            <div>
+              <div class="topImage"><img src="./images/hus.png" alt="Man moving box"></div>
+              <h2>28 sep 2018</h2>
+              <h1>Maxa priset p&aring; ditt hus n&auml;r du s&auml;ljer</h1>
+            </div>
+          </a>
+
+          <a class="topArticle" target="_blank" href="https://www.expressen.se/dinapengar/tech/uppgifter-amazon-slapper-atta-nya-produkter-med-alexa/">
+            <div>
+              <div class="topImage"><img src="./images/amazon.png" alt="Amazon logo"></div>
+              <h2>19 sep 2018</h2>
+              <h1>Uppgifter: Amazon sl&auml;pper 8 nya produkter med Alexa</h1>
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
+       </section>
 
-  <div class="pageContainer">
+      <!-- Grid section, latest articles -->
+      <section class="gridSection">
+        <span id="menuDest1"></span>
+        <h1 id='totalArticles' class="totalArticles"></h1>
+        <div class="sectionHeader">
+          <h1 id="headerCat1">Latest News</h1>
+        </div>
+        <div class="gridContainer" id="grid1">
+          <!--  CATEGORY 1 - GRID CONTAINER-->
+        </div>
+        <div class="sectionHeader"><h1 id="headerCat2">Second Latest News</h1></div>
+        <div class="gridContainer" id="grid2">
+          <!--  CATEGORY 2 - GRID CONTAINER-->
+        </div>
+        <div class="sectionHeader"><h1 id="headerCat3">Third Latest News</h1></div>
+        <div class="gridContainer" id="grid3">
+          <!--  CATEGORY 3 - GRID CONTAINER -->
+        </div>
+      </section>
 
-  <!-- Editorial section, top articles -->
-  <div class="topSection">
-    <div class="sectionHeader"><h1>Editors' picks</h1></div>
-    <div class="topContainer">
-     <div class="topArticle">
-
-
-    <div class="topImage"><img src="./images/apple-watch.png"></div>
-      <h2>12 sep 2018</h2><h1>Nya Iphone X &auml;r h&auml;r &ndash; s&aring; ser de tre nya modellerna ut</h1>
-     </div>
-
-     <div class="topArticle">
-       <div class="topImage"><img src="./images/valresultat.png"></div>
-       <h2>7 sep 2018</h2><h1>Valresultat &ndash; se vem som vinner valet d&auml;r du bor</h1>
-     </div>
-
-     <div class="topArticle">
-       <div class="topImage"><img src="./images/hus.png"></div>
-       <h2>28 sep 2018</h2><h1>Maxa priset p&aring; ditt hus n&auml;r du s&auml;ljer</h1>
-      </div>
-
-    <div class="topArticle">
-      <div class="topImage"><img src="./images/amazon.png"></div>
-      <h2>19 sep 2018</h2><h1>Uppgifter: Amazon sl&auml;pper 8 nya produkter med Alexa</h1>
-    </div>
-    </div>
-   </div>
-
-  <!-- Grid section, latest articles -->
-  <div class="gridSection">
-    <span id="menuDest1"></span>
-    <h1 id='totalArticles'></h1>
-    <div class="sectionHeader"><h1 id="headerCat1">Latest News</h1></div>
-    <div class="gridContainer" id="grid1">
-      <!--  CATEGORY 1 - GRID CONTAINER-->
-    </div>
-    <div class="sectionHeader"><h1 id="headerCat2">Second Latest News</h1></div>
-    <div class="gridContainer" id="grid2">
-      <!--  CATEGORY 2 - GRID CONTAINER-->
-    </div>
-    <div class="sectionHeader"><h1 id="headerCat3">Third Latest News</h1></div>
-    <div class="gridContainer" id="grid3">
-      <!--  CATEGORY 3 - GRID CONTAINER -->
-    </div>
-
-  </div>
-
-    <!-- Footer section -->
-    <div class="footer">
-      <div class="footerText">
-        M&auml;larvarvsbacken 8<br />
-        Stockholm, Sweden
-      </div>
-      <div class="footerLogos">
-          <img src="./images/facebook.png" alt="facebook" />
-          <img src="./images/twitter.png" alt="facebook" />
-          <img src="./images/instagram.jpg" alt="facebook" />
-          <img src="./images/usb.jpg" alt="facebook" />
-      </div>
-    </div>
-
-  </div>
-
-
-</body>
-<script src="./script.js" type="text/javascript"></script>
+      <!-- Footer section -->
+      <footer class="footer">
+        <div class="footerText">
+          M&auml;larvarvsbacken 8<br />
+          Stockholm, Sweden
+        </div>
+        <div class="footerLogos">
+            <img src="./images/facebook.png" alt="facebook" />
+            <img src="./images/twitter.png" alt="facebook" />
+            <img src="./images/instagram.jpg" alt="facebook" />
+            <img src="./images/usb.jpg" alt="facebook" />
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="./script.js" type="text/javascript"></script>
 </html>

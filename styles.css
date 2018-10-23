@@ -1,44 +1,11 @@
 body {
   background-color: #f2f2f2;
 }
-
 .pageContainer {
   width: 1300px;
   margin: auto;
   margin-top: 150px;
 }
-
-<article class="article">
-  <a href="" class="article__link">Läs mer</a>
-
-  <div class="article__description article__description--expanded">askndaksndknsdkns</div>
-</article>
-
-
-.square-article {
-  display: grid;
-
-  &--expanded {
-
-  }
-
-  &__link {
-    align: right;
-
-    @media (min-width: 768px) {
-
-    }
-  }
-
-  &__description {
-    height: 100px;
-
-    &--expanded {
-      height: 300px;
-    }
-  }
-}
-
 p {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-size: 16px;
@@ -46,7 +13,6 @@ p {
   font-weight: normal;
   letter-spacing: 0.5px;
 }
-
 .navbar {
   display: flex;
   flex-flow: row nowrap;
@@ -56,31 +22,26 @@ p {
   z-index: 10;
   position: fixed;
   top: 0;
-  /* width: 100%; */
   width: 1300px;
   height: 100px;
   margin: 0px;
   background-color: #ffffff;
 }
-
 .navbar li {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-size: 20px;
   line-height: 1.6;
   font-weight: 600;
   letter-spacing: 0.5px;
-  /* float: right; */
   display: inline;
   text-align: center;
   padding-right: 25px;
   padding-left: 30px;
 }
-
 .headerSection {
   display: flex;
   justify-content: center;
 }
-
 .headerLinkContainer {
   display: flex;
   flex-flow: row nowrap;
@@ -93,26 +54,20 @@ p {
   margin-right: 30px;
 }
 .headerLinkContainer ul li {
-  /* background: yellow; */
   font-size: 18px;
 }
 .headerLinkContainer ul li a {
   text-decoration: none;
   color: #000;
 }
-
 .headerImage {
-  /* height: auto;
-  display: inline; */
   display: flex;
   align-items: center;
 }
-
 .headerImage img {
   width: 400px;
   margin-left: 30px;
 }
-
 .sectionHeader h1 {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
@@ -122,35 +77,28 @@ p {
   border-top: 2px solid #2e2e2e;
   color: #1d222c;
 }
-
 .sectionHeader {
   margin-top: 50px;
   margin-bottom: 30px;
-  /* padding-top: 50px; */
 }
-
 .articleImage {
   transition: transform .2s;
 }
-
 .articleImage:hover {
   transform: scale(1.03);
 }
-
 .topContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-
 .topArticle img {
   background-color: #ffffff;
   border-bottom: 2px solid rgba(0,0,0,0);
   width: 100%;
   height: 180px;
 }
-
 .topArticle {
   width: 23%;
   background-color: #ffffff;
@@ -158,17 +106,13 @@ p {
   height: 330px;
   margin-bottom: 20px;
 }
-
 .topImage {
   overflow: hidden;
   height: 60%;
 }
-
 .topArticle:hover {
   border-bottom: 2px solid #fc4540;
 }
-
-
 .topArticle h1 {
   color: #1a1a1a;
   text-align: center;
@@ -182,7 +126,6 @@ p {
   letter-spacing: 1px;
   margin: 0px;
 }
-
 .topArticle h2 {
   color: #fc4540;
   text-align: center;
@@ -197,7 +140,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .topArticle p {
   margin: 0px;
   font-family: 'neue-haas-grotesk-display', sans-serif;
@@ -211,34 +153,28 @@ p {
   padding-right: 15px;
 
 }
-
-
-
 .articleInfo {
   display: none;
   padding: 15px;
 }
-
-
 .articleInfo a.button {
+  border: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80px;
   height: 80px;
   border-radius: 500px;
-  /* background: #366b72; */
   background: #fc6867;
   text-decoration: none;
   margin-top: 30px;
 }
-
- .articleInfo a.button p{
+.articleInfo a.button p {
   color: white;
   font-weight: 600;
 
 }
-#totalArticles{
+.totalArticles{
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 400;
   font-size: 25px;
@@ -246,7 +182,6 @@ p {
   padding-top: 25px;
   margin-bottom: -20px;
 }
-
 .gridArticle.expanded .articleInfo {
   display: block;
 }
@@ -260,10 +195,8 @@ p {
   grid-auto-flow: row dense;
 }
 .gridArticle.big h1:hover, .gridArticle.small .articleTitle h1:hover {
-  color: #1dafec
-  /* color: #a4a4a4 */
+  color: #1dafec;
 }
-
 .gridArticle .articleImage {
   background-image: url(./images/wasp.png);
   background-size: cover;
@@ -271,15 +204,6 @@ p {
   width: 100%;
   height: 100%;
 }
-
-/* .gridArticle.big {
-  grid-column: auto / span 2;
-  grid-row: auto / span 2;
-  background-color: lightgreen;
-  width: 100%;
-  position: relative;
-} */
-
 .gridArticle.big {
   grid-column: auto / span 2;
   grid-row: auto / span 2;
@@ -287,7 +211,6 @@ p {
   width: 100%;
   position: relative;
 }
-
 .gridArticle.big h1 {
   position: relative;
   width: 100px;
@@ -304,7 +227,6 @@ p {
   box-decoration-break: clone;
   max-width: 90%;
 }
-
 .gridArticle.big h2 {
   position: relative;
   width: 90%;
@@ -321,7 +243,6 @@ p {
   max-width: 90%;
   display: none;
 }
-
 .gridArticle.big .articleTitle {
   position: absolute;
   bottom: 30px;
@@ -329,14 +250,12 @@ p {
   display: inline;
   max-width: 90%;
 }
-
 .gridArticle.big .articleImage {
   overflow: hidden;
   object-position: center;
   height: 100%;
   width: 100%;
 }
-
 .gridArticle.small {
   grid-column: auto / span 2;
   grid-row: auto / span 1;
@@ -345,16 +264,9 @@ p {
   background-color: white;
   overflow: hidden;
 }
-
 .gridArticle.small:nth-child(5n), .gridArticle.small:nth-child(5n-1) {
   flex-flow: row-reverse nowrap;
-  /* background-color: pink; */
 }
-
-/* .small:nth-child(odd) {
-  flex-flow: row nowrap;
-} */
-
 .gridArticle.small h1 {
   color: #2e2e2e;
   text-align: left;
@@ -366,13 +278,11 @@ p {
   padding-left: 15px;
   padding-right: 15px;
 }
-
 .gridArticle.small h2 {
   text-align: left;
   display: block;
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-weight: 600;
-  /* font-style: italic; */
   color: #fc6867;
   font-size: 14px;
   line-height: 1.2;
@@ -381,33 +291,22 @@ p {
   padding-right: 15px;
   text-transform: uppercase;
 }
-
-
-/* .gridArticle.small p {
-  display: none;
-  color: #2e2e2e;
-} */
-
 .gridArticle.small .articleTitle {
   width: 50%;
 }
-
 .big .articleImageBox {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
-
 .small .articleImageBox {
   overflow: hidden;
   width: 50%;
 }
-
 .gridArticle.small .articleImage {
   width: 100%;
   overflow: hidden;
 }
-
 .gridArticle.expanded:nth-child(1n){
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
@@ -417,27 +316,22 @@ p {
 .gridArticle.expanded:nth-child(1n){
   flex-direction: row;
 }
-
 .gridArticle.big.expanded {
   grid-column: 1 / span 6;
   grid-row: auto / span 2;
   overflow: hidden;
   display: flex;
 }
-
 .gridArticle.expanded .articleImageBox {
   width: 33%;
 }
-
 .gridArticle.expanded .articleTitle {
   width: 67%;
 }
-
 .gridArticle.big.expanded .articleTitle {
   position: static;
   display: inline;
 }
-
 .gridArticle.expanded h1 {
   color: #141414;
   background-color: rgba(0, 0, 0, 0);
@@ -450,8 +344,6 @@ p {
   margin-bottom: 0;
   box-shadow: none;
 }
-
-
 .gridArticle.expanded h2 {
   text-align: left;
   display: block;
@@ -465,30 +357,24 @@ p {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-
 .gridArticle.expanded h2 {
   color: #a4a4a4;
 }
-
-
 .gridArticle.expanded .articleImage {
   justify-content: flex-start;
   width: 100%;
   background-image: url(https://cdn.vox-cdn.com/thumbor/uFgd8HtGxhl3NSKKQUBNX8hrjgs=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/13151871/lumixs_vladsavov.jpg);
 }
-
 .gridArticle.expanded p {
   display: block;
   color: black;
 }
-
 .gridArticle.expanded .datePublished {
   font-family: 'neue-haas-grotesk-display', sans-serif;
   font-size: 16px;
   color: #fc6867;
   margin-top: 0;
 }
-
 .footer {
   background-color: white;
   height: 50px;
@@ -498,7 +384,6 @@ p {
   flex-flow: row nowrap;
   justify-content: space-around;
 }
-
 .footerText {
   text-align: center;
   font-family: 'neue-haas-grotesk-display', sans-serif;
@@ -507,11 +392,11 @@ p {
   padding-bottom: 10px;
   height: 100%;
 }
-
 .footerLogos img {
   width: 40px;
   padding: 0px 3px;
 }
+
 
 /* TABLET VIEW */
 
@@ -519,109 +404,11 @@ p {
   .pageContainer {
     width: 100%;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
   }
-
   .topSection {
     display: none;
   }
-
-  .navbar {
-    overflow: hidden;
-    flex-direction: column;
-    background-color: white;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: black;
-    height: 100px;
-    margin: 0px;
-    background-color: #ffffff;
-  }
-  .navbar ul {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar li {
-    /* flex-wrap: wrap; */
-    font-size: 12px;
-    line-height: 1.6;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    float: right;
-    display: block;
-    text-align: center;
-    padding-right: 25px;
-    padding-left: 30px;
-    width: 100%;
-  }
-
-  .headerImage img {
-    width: 200px;
-    display: inline;
-    /* float: left; */
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-left: 40px; */
-    padding-top: 30px;
-  }
-
-  .gridArticle.big {
-    grid-column: auto / span 3;
-    grid-row: auto / span 2;
-    display: static;
-    background-color: white;
-    width: 100%;
-  }
-
-  .gridArticle.small {
-    grid-column: auto / span 3;
-    grid-row: auto / span 1;
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: white;
-    overflow: hidden;
-  }
-
-  .gridArticle.small:nth-child(n) {
-    flex-flow: row nowrap;
-    /* background-color: pink; */
-  }
-
-  .gridArticle.big.expanded, .gridArticle.small.expanded {
-    grid-column: auto / span 6;
-    grid-row: auto / span 4;
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .gridArticle.expanded .articleImageBox {
-    width: 100%;
-    height: 50%;
-  }
-
-  .gridArticle.expanded .articleTitle {
-    width: 100%;
-    heiht: 50%;
-  }
-}
-
-/* TABLET VIEW */
-
-@media screen and (min-width: 701px) and (max-width: 1100px) {
-  .pageContainer {
-    width: 100%;
-    margin: auto;
-    margin-top: 150px;
-  }
-
-  .topSection {
-    display: none;
-  }
-
   .headerLinkContainer {
     display: block;
     margin-left: auto;
@@ -630,15 +417,12 @@ p {
   .navbar {
     overflow: hidden;
     flex-direction: column;
-    background-color: white;
     z-index: 10;
     position: fixed;
     top: 0;
     width: 100%;
-    color: black;
     height: 100px;
     margin: 0px;
-    background-color: #ffffff;
   }
   .navbar ul {
     width: 100%;
@@ -651,29 +435,25 @@ p {
     padding-right: 0;
   }
   .navbar li a {
-    /* flex-wrap: wrap; */
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.6;
     font-weight: bold;
     letter-spacing: 0.5px;
     float: right;
     display: block;
     text-align: center;
-    padding-right: 25px;
-    padding-left: 30px;
     width: 100%;
   }
-
   .headerImage img {
     width: 200px;
     display: inline;
-    /* float: left; */
     margin-left: auto;
     margin-right: auto;
-    /* margin-left: 40px; */
     padding-top: 30px;
   }
-
+  .totalArticles{
+    border-top: none;
+  }
   .gridArticle.big {
     grid-column: auto / span 3;
     grid-row: auto / span 2;
@@ -681,7 +461,6 @@ p {
     background-color: white;
     width: 100%;
   }
-
   .gridArticle.small {
     grid-column: auto / span 3;
     grid-row: auto / span 1;
@@ -690,24 +469,19 @@ p {
     background-color: white;
     overflow: hidden;
   }
-
   .gridArticle.small:nth-child(n) {
     flex-flow: row nowrap;
-    /* background-color: pink; */
   }
-
   .gridArticle.big.expanded, .gridArticle.small.expanded {
     grid-column: auto / span 6;
     grid-row: auto / span 4;
     display: flex;
     flex-flow: column nowrap;
   }
-
   .gridArticle.expanded .articleImageBox {
     width: 100%;
     height: 50%;
   }
-
   .gridArticle.expanded .articleTitle {
     width: 100%;
     heiht: 50%;
@@ -719,20 +493,30 @@ p {
   .pageContainer {
     width: 100%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 100px;
   }
-
   .topSection {
     display: none;
+  }
+  .headerImage {
+    align-items: flex-start;
   }
   .headerLinkContainer {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  .headerLinkContainer {
+    width: 50%;
+    margin: auto;
+  }
+  .headerLinkContainer ul{
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   .navbar {
-    overflow: hidden;
-    flex-direction: column;
+    flex-flow: row wrap;
     background-color: white;
     z-index: 10;
     position: fixed;
@@ -750,30 +534,30 @@ p {
     padding-left: 0;
     padding-right: 0;
   }
-  .navbar li a{
-    /* flex-wrap: wrap; */
-    font-size: 12px;
+  .navbar li a {
+    font-size: 14px;
     line-height: 1.6;
     font-weight: bold;
     letter-spacing: 0.5px;
     float: right;
     display: block;
     text-align: center;
-    padding-right: 25px;
-    padding-left: 30px;
+    padding-left: 30px; */
     width: 100%;
   }
-
+  .headerImage {
+    width: 50%;
+  }
   .headerImage img {
-    width: 200px;
-    display: inline;
-    /* float: left; */
+    width: 150px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    /* margin-left: 40px; */
-    padding-top: 30px;
+    padding: 30px 10px 0 10px;
   }
-
+  .totalArticles{
+    border-top: none;
+  }
   .gridArticle.big {
     grid-column: auto / span 6;
     grid-row: auto / span 2;
@@ -781,7 +565,6 @@ p {
     background-color: white;
     width: 100%;
   }
-
   .gridArticle.small {
     grid-column: auto / span 6;
     grid-row: auto / span 1;
@@ -790,26 +573,20 @@ p {
     background-color: white;
     overflow: hidden;
   }
-
   .gridArticle.small:nth-child(n) {
     flex-flow: row nowrap;
-    /* background-color: pink; */
   }
-
   .gridArticle.big.expanded, .gridArticle.small.expanded {
     grid-column: auto / span 6;
     grid-row: auto / span 4;
     display: flex;
     flex-flow: column nowrap;
   }
-
   .gridArticle.expanded .articleImageBox {
     width: 100%;
     height: 50%;
   }
-
   .gridArticle.expanded .articleTitle {
     width: 100%;
-    heiht: 50%;
   }
 }

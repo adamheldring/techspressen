@@ -56,7 +56,9 @@ const createPage = (result, catName) => {
 
   for (i = 0; i < generateNr; i++) {
     // console.log(i)
-    const newArticle = document.createElement('div')    //Creates new article div
+    const newArticle = document.createElement('article')    //Creates new article div
+      newArticle.tabIndex = 0
+      newArticle.lang = "en"
     if (i == 0 || i == 6 || i == 12) {
       newArticle.className = "gridArticle big"
     } else {
@@ -111,7 +113,6 @@ const createPage = (result, catName) => {
       newInfoBox.appendChild(newPubDate)
     }
 
-
     const newDescPara = document.createElement('p')
     if (result.articles[i].description){
       newDescPara.innerHTML = `${result.articles[i].description}` //Places REAL GOOGLE ARTICLE TITLE inside title header
@@ -124,6 +125,7 @@ const createPage = (result, catName) => {
 
     const newButtonLink = document.createElement('a')
     newButtonLink.className = "button"
+    newButtonLink.tabIndex = 0
     if (result.articles[i].url) {
       newButtonLink.href = `${result.articles[i].url}`
       newButtonLink.target = '_blank'
@@ -135,6 +137,7 @@ const createPage = (result, catName) => {
     }
 
     newArticle.addEventListener('click', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
+    newArticle.addEventListener('keypress', expand) //Adds event listener on the new article that's continously looking for click and if so toggles expand.
 
     // document.getElementsByClassName('gridArticle')[i].onclick = expand
     grid.appendChild(newArticle)                        //APPENDS ENTIRE NEW ARTCILE TO ACTUAL GRID/PAGE – SO IT SHOWS!
@@ -150,7 +153,6 @@ function expand(e) {
 
 //IMPORTANT!
 //Call for new category
-
 
 const catName1 = "FUTURE TECHNOLOGY"
 const photographyUrl = 'https://newsapi.org/v2/everything?' +
